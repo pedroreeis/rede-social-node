@@ -1,0 +1,76 @@
+<div class="formulario">
+
+    <div class="titulo">
+        <h1>Postar</h1>
+    </div>
+
+    <form action="/guardar" method="post">
+        <p>Título</p>
+        <input type="text" name="titulo">
+
+        <p>Autor</p>
+        <input type="text" name="autor">
+
+        <p>Públicação</p>
+        <textarea name="publicacao" id="" cols="30" rows="5"></textarea>
+
+        <div>
+            <p><input class="submit" type="submit" value="Postar"></p>
+        </div>
+    </form>
+
+</div>
+
+<style>
+    body{
+        background: #000;
+    }
+
+    .titulo h1{
+        text-align: center;
+        color: #fff;
+        border-bottom: 1px solid grey;
+        padding-bottom: 20px; 
+    }
+
+    .formulario{
+        background: rgba(255, 77, 77, 0.9);
+        width: 350px;
+        height: 550px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+    }
+
+    .formulario form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+    }
+
+    .formulario form p{
+        color: #fff;
+    }
+
+    .formulario form input{
+        border: none;
+        background: lightgray;
+        height: 30px;
+        width: 100%;
+    }
+
+    .formulario form textarea{
+        border: none;
+        background: lightgray;
+    }
+
+    .submit:hover{
+        background: #000;
+        color: #fff;
+        transition: 1s;
+    }
+</style>

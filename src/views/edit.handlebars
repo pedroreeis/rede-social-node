@@ -1,0 +1,78 @@
+<div class="formulario">
+
+    <div class="titulo">
+        <h1>Editar</h1>
+    </div>
+
+    <form action="/edit" method="post">
+    {{#each Mensagem}}
+        <p>Título</p>
+        <input type="text" value="{{titulo}}" name="titulo">
+
+        <p>Autor</p>
+        <input type="text" value="{{autor}}" name="autor">
+
+        <p>Públicação</p>
+        <textarea name="publicacao" id="" cols="30" rows="5">{{publicacao}}</textarea>
+
+        <div>
+            <p><input class="submit" type="submit" value="Editar"></p>
+        </div>
+    {{/each}}
+    </form>
+
+</div>
+
+<style>
+    body{
+        background: #000;
+    }
+
+    .titulo h1{
+        text-align: center;
+        color: #fff;
+        border-bottom: 1px solid grey;
+        padding-bottom: 20px; 
+    }
+
+    .formulario{
+        background: rgba(255, 77, 77, 0.9);
+        width: 350px;
+        height: 550px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+    }
+
+    .formulario form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+    }
+
+    .formulario form p{
+        color: #fff;
+    }
+
+    .formulario form input{
+        border: none;
+        background: lightgray;
+        height: 30px;
+        width: 100%;
+    }
+
+    .formulario form textarea{
+        border: none;
+        background: lightgray;
+    }
+
+    .submit:hover{
+        background: #000;
+        color: #fff;
+        transition: 1s;
+    }
+</style>

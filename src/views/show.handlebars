@@ -1,0 +1,81 @@
+<div class="conteudo">
+
+    <div class="titulo-principal">
+        <h1>Postagens</h1>
+    </div>
+
+        {{#each Mensagem}}
+        <div class="corpo-mensagem">
+            <div class="titulo-secundario">
+                <h1>{{titulo}}</h1>
+            </div>
+
+            <p>{{autor}}</p>
+            <p>{{publicacao}}</p>
+            <small>{{createdAt}}</small>
+
+            <div>
+                <a href="/del/{{id}}"><button class="btn1">Deletar</button></a>
+                <a href="/editar/{{id}}"><button class="btn2">Editar</button></a>
+            </div>
+        </div>
+        {{/each}}
+
+</div>
+
+<style>
+    body{
+        background: #000;
+    }
+
+    .titulo-principal h1{
+        text-align: center;
+        color: #fff;
+        margin: 20px;
+        padding: 20px;
+        background: rgba(51, 51, 51, 0.6);
+    }
+
+    .conteudo{
+        background: rgba(255, 77, 77, 0.9);
+        width: 450px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        overflow: auto;
+    }
+
+    .corpo-mensagem{
+        border: 1px solid lightblue;
+    }
+
+    .corpo-mensagem, p{
+        margin: 10px;
+    }
+
+    .corpo-mensagem .titulo-secundario h1{
+        border: 1px solid lightgray;
+        margin: 10px;
+        color: lightgray;
+        background: rgba(51, 51, 51, 0.6);
+    }
+
+    button{
+        margin: 5px;
+        padding: 10px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .btn1{
+        background: #cc0000;
+    }
+
+    .btn2{
+        background: #009933;
+    }
+</style>
