@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 
-class CadastrarController {
+class RegisterController {
   async create(request: Request, response: Response) {
-    return response.render('cadastrar')
+    return response.render('register')
   }
 }
 
-export { CadastrarController };
+export { RegisterController };

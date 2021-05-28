@@ -1,10 +1,10 @@
-const Sequelize = require('sequelize')
-const sequelize = new Sequelize('nodejs', 'root', '', {
-    dialect: 'mysql',
-    host: 'Localhost'
-})
+import Mysql, {createConnection} from 'mysql2/promise'
 
-module.exports = {
-    sequelize: sequelize,
-    Sequelize: Sequelize
+async function initConnection() {
+    const connection = createConnection({host:'localhost', user: 'root', database: 'discord'});
+    console.log(`[DATABASE] Started.`)
 }
+
+
+export { initConnection }
+
