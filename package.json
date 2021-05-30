@@ -18,12 +18,17 @@
   },
   "homepage": "https://github.com/queendeveloperbr/rede-social-node#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
     "handlebars": "^4.7.7",
     "http": "*",
-    "mysql2": "^2.2.5",
+    "mongoose": "^5.12.12",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
     "sequelize": "^6.6.2",
     "socket.io": "^4.1.2"
   },

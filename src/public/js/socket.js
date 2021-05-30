@@ -17,7 +17,7 @@ var socket = io('http://181.213.110.132:3333');
             $('#chat').submit(function(event) {
                 event.preventDefault();
 
-                var author = $('input[name=username]').val();
+               var author = $('h3').text()
                 var message = $('input[name=message]').val();
 
             if(author.length && message.length) {
@@ -26,6 +26,8 @@ var socket = io('http://181.213.110.132:3333');
                     message: message,
                 };
 
+                $('input[name=message').val('')
+                
                 renderMessage(messageObject);
             socket.emit('sendMessage', messageObject)
             }
