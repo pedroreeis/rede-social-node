@@ -94,15 +94,15 @@ function isLoggedIn(req, res, next) {
 let messages = [];
 
 io.on('connection', socket => {
-   // console.log(`Socket conectado: ${socket.id} ${socket.request.connection.remoteAddress}`);
-    
-    socket.emit('previousMessages', messages);
-
-    socket.on('sendMessage', data => {
-        messages.push(data);
-        socket.broadcast.emit('receivedMessage', data)
-    });
-});
+    // console.log(`Socket conectado: ${socket.id} ${socket.request.connection.remoteAddress}`);
+     
+     socket.emit('previousMessages', messages);
+ 
+     socket.on('sendMessage', data => {
+         messages.push(data);
+         socket.broadcast.emit('receivedMessage', data)
+     });
+ });
 
 
 export { app, server };
