@@ -25,7 +25,7 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect("mongodb+srv://superadmin:123456789Pedro@cluster0.wwtaz.mongodb.net/chat?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://superadmin:password@cluster0.wwtaz.mongodb.net/chat?retryWrites=true&w=majority");
 
 app.set('view engine', 'handlebars')
 app.use(bodyParser.urlencoded({ extended: true }));
